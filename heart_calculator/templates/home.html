@@ -12,6 +12,7 @@
   </head>
   <body>
     <h1>Calculator Your Heart Health!</h1>
+    <form action="{{ url_for("home_page")}}" method="post">
     <ul>
       <li>
         <h5>Select your Age</h5>
@@ -41,6 +42,15 @@
       </li>
 
       <li>
+        <h5>Physical Activity</h5>
+        <select name="physical">
+          {% for physical in physical_act_list %}
+            <option>{{physical}}</option>
+          {% endfor %}
+        </select>
+      </li>
+
+      <li>
         <h5>How often do you eat fried foods and sweats?</h5>
         <select name="how_often">
           {% for how_often in how_often_list %}
@@ -58,6 +68,7 @@
         </select>
       </li>
     </ul>
+    <button type="submit">Submit</button>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
