@@ -8,7 +8,7 @@ def index():
     age_list = ['<20', '20><35', '35><60', '60<']
     gender_list = ['Male', 'Female']
     profession_list = ['Desk Job', 'Field Job', 'Standing Job']
-    physical_act_list = ['Exaercise Daily', 'Exercise once a week', 'Never']
+    physical_act_list = ['Exercise Daily', 'Exercise once a week', 'Never']
     how_often_list = ['Once a Week', 'Once a Month', 'Twice or More in a Week']
     family_history_list = ['Yes', 'No']
 

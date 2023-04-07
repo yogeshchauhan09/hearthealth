@@ -14,68 +14,85 @@
     <title>Home Page</title>
   </head>
   <body>
-    <h1>Calculator Your Heart Health!</h1>
     <form action="{{ url_for("index")}}" method="post">
-      <div class="container">
-        <h5 >Select your Age</h5>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          {% for age in age_list %}
-           <label class="btn btn-outline-primary rounded-pill mr-1">
-           <input type="radio" name="age"  id="age" autocomplete="off"> {{age}}
-           </label>
-           {% endfor %}
+      <!-- <div class="container"> -->
+      <div class="card mx-auto shadow-lg p-3" style="width: 34rem; margin-top: 80px; margin-bottom: 40px;">
+        <div class="card-header text-center text-white bg-primary">
+          <img class="float-left" src="/static/apple_logo.png" alt="Logo" style="width: 48px; height: 48px; margin-top: 20px; margin-bottom: 20px;">
+          <h4 class="p-4">Check Your Heart Health!</h4>
         </div>
+        <div class="card-body">
+          <h5 >Select your Age</h5>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            {% for age in age_list %}
+             <label aria-label="Small" class="btn btn-outline-primary rounded-pill mr-1">
+             <input type="radio" name="age" id="age" autocomplete="off" required> {{age}}
+             </label>
+             {% endfor %}
+          </div>
 
-        <h5>Select your Gender</h5>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          {% for gender in gender_list %}
-           <label class="btn btn-outline-primary rounded-pill mr-1">
-           <input type="radio" name="gender" id="gender" autocomplete="off"> {{gender}}
-           </label>
-           {% endfor %}
-        </div>
+          <h5 style="margin-top: 20px;">Select your Gender</h5>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            {% for gender in gender_list %}
+             <label class="btn btn-outline-primary rounded-pill mr-1">
+             <input type="radio" name="gender" id="gender" autocomplete="off" required> {{gender}}
+             </label>
+             {% endfor %}
+          </div>
 
-        <h5>Select your Profession</h5>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          {% for profession in profession_list %}
-           <label class="btn btn-outline-primary rounded-pill mr-1">
-           <input type="radio" name="profession" id="profession" autocomplete="off"> {{profession}}
-           </label>
-           {% endfor %}
-        </div>
+          <h5 style="margin-top: 20px;">Select your Profession</h5>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            {% for profession in profession_list %}
+             <label class="btn btn-outline-primary rounded-pill mr-1">
+             <input type="radio" name="profession" id="profession" autocomplete="off" required> {{profession}}
+             </label>
+             {% endfor %}
+          </div>
 
-        <h5>Physical Activity</h5>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          {% for physical in physical_act_list %}
-           <label class="btn btn-outline-primary rounded-pill mr-1">
-           <input type="radio" name="physical" id="physical" autocomplete="off"> {{physical}}
-           </label>
-           {% endfor %}
-        </div>
+          <h5 style="margin-top: 20px;">Physical Activity</h5>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            {% for physical in physical_act_list %}
+             <label class="btn btn-outline-primary rounded-pill mr-1">
+             <input type="radio" name="physical" id="physical" autocomplete="off" required> {{physical}}
+             </label>
+             {% endfor %}
+          </div>
 
-        <h5>How often do you eat fried foods and sweats?</h5>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          {% for how_often in how_often_list %}
-           <label class="btn btn-outline-primary rounded-pill mr-1">
-           <input type="radio" name="how_often" id="how_often" autocomplete="off"> {{how_often}}
-           </label>
-           {% endfor %}
-        </div>
+          <h5 style="margin-top: 20px;">How often do you eat fried foods and sweats?</h5>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            {% for how_often in how_often_list %}
+             <label class="btn btn-outline-primary rounded-pill mr-1">
+             <input type="radio" name="how_often" id="how_often" autocomplete="off" required> {{how_often}}
+             </label>
+             {% endfor %}
+          </div>
 
-        <h5>Any family history of Diabetes/BP or Heart diease?</h5>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          {% for family_history in family_history_list %}
-           <label class="btn btn-outline-primary rounded-pill mr-1">
-           <input type="radio" name="family_history" id="family_history" autocomplete="off"> {{family_history}}
-           </label>
-           {% endfor %}
-        </div>
+          <h5 style="margin-top: 20px;">Any family history of Diabetes/BP or Heart diease?</h5>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            {% for family_history in family_history_list %}
+             <label class="btn btn-outline-primary rounded-pill mr-1">
+             <input type="radio" name="family_history" id="family_history" autocomplete="off" required> {{family_history}}
+             </label>
+             {% endfor %}
+          </div>
 
-        <h5>Submit form</h5>
-        <div>
-          <button type="submit" class="btn btn-primary rounded-pill">Submit</button>
+          <h5 style="margin-top: 20px;">Submit form</h5>
+          <div>
+            <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+          </div>
         </div>
       </div>
+      <!-- </div> -->
+
+      <!-- <div class="card mx-auto" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div> -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
