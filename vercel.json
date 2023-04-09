@@ -1,0 +1,11 @@
+{
+  "builds": [
+    {
+      "src": "heathhealth/app.py",
+      "use": "@vercel/flask"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "hearthealth/app.py" }
+  ]
+}
